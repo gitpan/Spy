@@ -1,0 +1,54 @@
+B::More
+$Id: README,v 1.1 2003/02/25 01:08:58 xmath Exp $
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL && make && make test
+   make install
+
+Or use CPANPLUS to automate the process.
+
+
+Module documentation:
+
+NAME
+    B::More - Additional introspection methods and functions
+
+DESCRIPTION
+    Adds stuff I needed in B and wasn't there :-)
+
+    Feel free to email me with suggestions for other methods I can add.
+
+  B::SV METHODS
+    svref
+        Inverse of B::svref_2object.
+
+  B::PVMG METHODS
+    magic
+        Returns a string containing the types of all MAGIC.
+
+    magic TYPE
+        Returns the B::MAGIC object for the magic with specified type, or
+        undef if no magic with that type was found.
+
+FUNCTIONS
+    defstash
+        Returns the default stash (main::) as B::HV object.
+
+    curstash
+        Returns the current stash (package) as B::HV object. Note that this
+        only makes sense at compile time (in a BEGIN-block or in
+        eval-string).
+
+SEE ALSO
+    B, perlguts
+
+AUTHOR
+    Matthijs van Duin <xmath@cpan.org>
+
+    Copyright (C) 2003 Matthijs van Duin. All rights reserved. This library
+    is free software; you can redistribute it and/or modify it under the
+    same terms as Perl itself.
+

@@ -1,0 +1,38 @@
+# $Id: Format.pm,v 1.4 2003/02/26 18:57:47 xmath Exp $
+
+package Spy::Format;
+
+use 5.006;
+use strict;
+use warnings;
+
+use Spy;
+our $VERSION = $Spy::VERSION;
+
+use base 'Spy::Code';
+
+use Carp;
+use B::More;
+
+sub type : method { "FORMAT" }
+sub noun : method { "a format" }
+
+1;
+
+__END__
+
+=head1 NAME
+
+Spy::Format - Spy on a format variable
+
+=head1 DESCRIPTION
+
+=head1 AUTHOR
+
+Matthijs van Duin <xmath@cpan.org>
+
+Copyright (C) 2003   Matthijs van Duin.  All rights reserved.
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+
+=cut

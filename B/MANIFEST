@@ -1,0 +1,8 @@
+MANIFEST
+Makefile.PL
+More.pm
+More.xs
+README
+t/1.t
+typemap
+Changes
