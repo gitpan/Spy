@@ -1,4 +1,4 @@
-# $Id: Object.pm,v 1.1 2003/02/28 15:45:01 xmath Exp $
+# $Id: Object.pm,v 1.2 2003/03/06 16:30:16 xmath Exp $
 
 package Spy::Object;
 
@@ -13,7 +13,7 @@ use overload
 	bool => sub { 1 },
 	'0+' => sub { int ${$_[0]} },
 	'""' => sub { sprintf "%s(0x%x)", ref($_[0]), int(${$_[0]}) },
-	'==' => sub { ref($_[0]) eq ref($_[1]) && ${$_[0]} == ${$_[1]} },
+	'==' => sub { ref($_[0]) eq ref($_[1]) && 0+$_[0] == 0+$_[1] },
 	fallback => 1;
 
 use Carp;
@@ -21,15 +21,12 @@ use B::More;
 
 sub _new : method {
 	my ($class, $ref) = @_;
-	$ref && $class->can('type') or return;
-	my $addr = int \$ref;
-	my $obj = bless \$ref, $class;
-#	B::SV::chflags \$addr, B::SVf_READONLY, 0;
-	$obj
+	bless \$ref, $class
 }
 
 sub ref : method { ${$_[0]} }
 sub noun : method { undef }
+sub type : method { undef }
 
 1;
 

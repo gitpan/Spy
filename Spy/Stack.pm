@@ -1,4 +1,4 @@
-# $Id: Stack.pm,v 1.3 2003/03/03 00:12:58 xmath Exp $
+# $Id: Stack.pm,v 1.4 2003/03/04 23:25:12 xmath Exp $
 
 package Spy::Stack;
 
@@ -27,13 +27,13 @@ my @si_types = qw(unknown undef main magic sort signal overload destroy
 	warnhook diehook require);
 
 sub kind : method {
-	my $t = B::SI::TYPE(@_);
+	my $t = B::SI::type(@_);
 	$t >= -1 && $si_types[$t+1] || $t
 }
 
-sub prev : method { Spy::Stack->_new(B::SI::PREV(@_)) }
+sub prev : method { Spy::Stack->_new(B::SI::prev(@_)) }
 
-sub contexts : method { B::SI::CXIX(@_)+1 }
+sub contexts : method { B::SI::cxix(@_)+1 }
 
 sub context : method {
 	my ($stack, $index) = @_;

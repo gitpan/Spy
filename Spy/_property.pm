@@ -1,6 +1,6 @@
 package Spy::_property;
 
-# $Id: _property.pm,v 1.1 2003/02/25 01:08:58 xmath Exp $
+# $Id: _property.pm,v 1.2 2003/03/04 23:25:43 xmath Exp $
 
 use 5.006;
 use strict;
@@ -8,8 +8,6 @@ use warnings;
 
 use Carp;
 $Carp::Internal{+__PACKAGE__}++;
-
-our $VERSION = '1.00';
 
 our @EXPORT = qw( _property );
 use base 'Exporter';

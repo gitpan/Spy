@@ -1,0 +1,38 @@
+# $Id: Hash.pm,v 1.3 2003/02/25 23:06:12 xmath Exp $
+
+package Spy::Hash;
+
+use 5.006;
+use strict;
+use warnings;
+
+use Spy;
+our $VERSION = $Spy::VERSION;
+
+use base 'Spy::Variable';
+
+use Carp;
+use B::More;
+
+sub type : method { "HASH" }
+sub noun : method { "a hash" }
+
+1;
+
+__END__
+
+=head1 NAME
+
+Spy::Hash - Spy on a hash variable
+
+=head1 DESCRIPTION
+
+=head1 AUTHOR
+
+Matthijs van Duin <xmath@cpan.org>
+
+Copyright (C) 2003   Matthijs van Duin.  All rights reserved.
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+
+=cut

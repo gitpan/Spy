@@ -10,6 +10,10 @@ Changes
 MANIFEST
 Makefile.PL
 README
+Spy/.#Format.pm.1.3
+Spy/.#Hash.pm.1.3
+Spy/.#IO.pm.1.3
+Spy/.#LValue.pm.1.4
 Spy/_property.pm
 Spy/Array.pm
 Spy/Code.pm
@@ -20,9 +24,12 @@ Spy/Hash.pm
 Spy/IO.pm
 Spy/LValue.pm
 Spy/Object.pm
+Spy/Ref.pm
 Spy/Scalar.pm
 Spy/Stack.pm
 Spy/Stash.pm
 Spy/Variable.pm
 Spy.pm
+context.pl
 t/splice.t
+true.pl

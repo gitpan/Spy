@@ -1,15 +1,7 @@
 Spy
-$Id: README,v 1.1 2003/02/25 01:08:58 xmath Exp $
+$Id: README,v 1.3 2003/03/06 22:38:59 xmath Exp $
 
-INSTALLATION
+This is a draft of the Spy modules; I realized this is getting rather big 
+and I don't have time for it right now.
 
-To install this module type the following:
-
-   perl Makefile.PL && make && make test
-   make install
-
-Or use CPANPLUS to automate the process.
-
-
-Module documentation:
-
+If someone wants to pick up development, just let me know at xmath@cpan.org

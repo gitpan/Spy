@@ -1,7 +1,14 @@
-# $Id: Makefile.PL,v 1.1 2003/02/25 01:08:57 xmath Exp $
+# $Id: Makefile.PL,v 1.3 2003/03/06 22:38:59 xmath Exp $
 
 use 5.006;
 use ExtUtils::MakeMaker;
+
+print STDERR q(
+############################################
+Development of Spy is suspended - see README
+############################################
+
+);
 
 WriteMakefile(
 	NAME		=> 'Spy',

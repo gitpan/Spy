@@ -1,4 +1,4 @@
-# $Id: Spy.pm,v 1.8 2003/03/03 14:49:39 xmath Exp $
+# $Id: Spy.pm,v 1.9 2003/03/06 22:40:36 xmath Exp $
 
 package Spy;
 
@@ -9,7 +9,7 @@ use warnings;
 use Carp;
 use B::More;
 
-our $VERSION = "0.00_01";
+our $VERSION = "0.00_02";
 
 use base 'Exporter';
 our @EXPORT = qw(spy spy_ref spy_scalar spy_var spy_list spy_refs spy_stack
